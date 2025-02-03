@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Expense Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense Description"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/descriptionInput"
+            android:hint="e.g., Dinner at Cafe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Amount -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Amount"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/amountInput"
+            android:hint="e.g., 100.00"
+            android:inputType="numberDecimal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Payer Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Who Paid?"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/payerSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Select Members to Split -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Members to Split With"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <ListView
+            android:id="@+id/membersListView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:choiceMode="multipleChoice"
+            android:dividerHeight="1dp"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Split Type Radio Group -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Split Type"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/splitTypeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <RadioButton
+                android:id="@+id/evenSplitRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Even"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/unevenSplitRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uneven"
+                android:layout_marginStart="20dp"/>
+        </RadioGroup>
+
+        <!-- Split Button -->
+        <Button
+            android:id="@+id/splitButton"
+            android:text="Split Bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:padding="10dp"/>
+    </LinearLayout>
+</ScrollView>
